@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/BackgroundStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_light">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        style="@style/CardViewStyle"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="20dp">
+
+            <TextView
+                android:id="@+id/textViewActivityLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="@string/textview_activity_label"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:ems="10"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/textViewActivityLabel"
+                app:layout_constraintTop_toTopOf="@+id/textViewActivityLabel"
+                tools:text="hiking" />
+
+            <TextView
+                android:id="@+id/textViewTypeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginTop="50dp"
+                android:text="@string/textview_type_label"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewActivityLabel"
+                app:layout_constraintTop_toBottomOf="@+id/textViewActivityLabel" />
+
+            <TextView
+                android:id="@+id/textViewType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:ems="10"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/textViewTypeLabel"
+                app:layout_constraintTop_toTopOf="@+id/textViewTypeLabel"
+                tools:text="education" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonBored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:padding="10dp"
+        android:text="@string/button_bored"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
